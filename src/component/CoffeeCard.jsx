@@ -20,7 +20,7 @@ const CoffeeCard = ({coffee}) => {
                     <div className="btn-group btn-group-vertical space-y-4">
                         <button className="btn">View</button>
                         <button className="btn">Edit</button>
-                        <button>X</button>
+                        <button className="btn">X</button>
                     </div>
                 </div>
             </div>
