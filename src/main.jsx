@@ -1,16 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from '../App.jsx'
+import App from './App.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
-import AddCoffee from '../component/AddCoffee.jsx';
-import UpdateCoffee from '../component/UpdateCoffee.jsx';
-import SignUp from '../component/SignUp.jsx';
-import SignIn from '../component/SignIn.jsx';
-import AuthProvider from '../provider/AuthProvider.jsx';
+import AddCoffee from './component/AddCoffee.jsx';
+import UpdateCoffee from './component/UpdateCoffee.jsx';
+import SignIn from './component/SignIn.jsx';
+import AuthProvider from './provider/AuthProvider.jsx';
+import SignUp from './component/SignUp.jsx';
 
 
 const router = createBrowserRouter([
@@ -29,11 +29,11 @@ const router = createBrowserRouter([
     loader: ({params}) => fetch(`http://localhost:5000/coffee/${params.id}`)
   },
   {
-    path:'/signup',
+    path:'/signUp',
     element:<SignUp></SignUp>
   },
   {
-    path:'/signin',
+    path:'/signIn',
     element:<SignIn></SignIn>
   }
 ]);
