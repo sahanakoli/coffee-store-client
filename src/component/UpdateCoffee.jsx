@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import Swal from 'sweetalert2'
+import Navbar from "./Navbar/Navbar";
 
 const UpdateCoffee = () => {
 
@@ -43,7 +44,9 @@ const UpdateCoffee = () => {
         })
     }
     return (
-        <div className="bg-[#F4F3F0] p-24">
+        <div>
+            <Navbar></Navbar>
+            <div className="bg-[#F4F3F0] p-24">
             <h2 className=" text-3xl font-bold text-center mt-8">Update Coffee: {name}</h2>
             <form onSubmit={handleUpdateCoffee}>
                 {/* form name and quantity row */}
@@ -114,8 +117,9 @@ const UpdateCoffee = () => {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Update Coffee" className="btn btn-neutral w-full" />
+                <input type="submit" value="Update Coffee" className="btn btn-neutral bg-[#D2B48C] w-full" />
             </form>
+        </div>
         </div>
     );
 };

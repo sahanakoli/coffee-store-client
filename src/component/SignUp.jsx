@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { AuthContext } from "../provider/AuthProvider";
 import Navbar from "./Navbar/Navbar";
+import { AuthContext } from "../provider/AuthProvider";
 
 
 const SignUp = () => {
@@ -32,7 +32,7 @@ const SignUp = () => {
                 console.log(data);
             })
         })
-        .then(error => {
+        .catch(error => {
             console.error(error);
         })
     }

@@ -29,7 +29,7 @@ const Users = () => {
         <div>
             <Navbar></Navbar>
             <h2 className="text-3xl font-semibold text-center mt-8">Users</h2>
-            <div className="overflow-x-auto mt-10">
+            <div className="overflow-x-auto mt-10 w-11/12 mx-auto">
                 <table className="table bg-base-200">
                     {/* head */}
                     <thead>
@@ -48,7 +48,7 @@ const Users = () => {
                                 <th>1</th>
                                 <td>{user.email}</td>
                                 <td>{user.createdAt}</td>
-                                <td></td>
+                                <td>{user.lastLoggedAt}</td>
                                 <td>
                                     <button onClick={ () => handleDelete(user._id)} 
                                     className="btn">X</button>

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { createContext, useState } from "react";
-import {createUserWithEmailAndPassword, getAuth} from "firebase/auth"
+import {createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword} from "firebase/auth"
 import app from "../firebase/firebase.confiq";
 
 
@@ -18,10 +18,16 @@ const AuthProvider = ({children}) => {
         setLoading(false)
         return createUserWithEmailAndPassword(auth, email, password)
     }
+
+    const signInUser = (email, password) =>{
+        setLoading(true);
+        return signInWithEmailAndPassword(auth, email, password);
+    }
     const userInfo = {
         user,
         loading,
-        createUser
+        createUser,
+        signInUser
     }
 
     return (
