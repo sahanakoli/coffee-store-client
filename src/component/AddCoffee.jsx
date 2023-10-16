@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2'
+import Navbar from './Navbar/Navbar';
 
 
 
@@ -40,11 +41,13 @@ const AddCoffee = () => {
         })
     }
     return (
-        <div className="bg-[#F4F3F0] p-24">
-            <h2 className=" text-3xl font-bold text-center mt-8">Add Coffee</h2>
+        <div>
+            <Navbar></Navbar>
+            <div className="bg-[#F4F3F0] p-24">
+            <h2 className=" text-3xl font-bold text-center mt-4">Add Coffee</h2>
             <form onSubmit={handleAddCoffee}>
                 {/* form name and quantity row */}
-                <div className="md:flex mb-8">
+                <div className="md:flex mb-8 mt-10">
                     <div className="form-control md:w-1/2">
                         <label className="label">
                             <span className="label-text">Coffee Name</span>
@@ -113,6 +116,7 @@ const AddCoffee = () => {
                 </div>
                 <input type="submit" value="Add Coffee" className="btn btn-neutral w-full" />
             </form>
+        </div>
         </div>
     );
 };

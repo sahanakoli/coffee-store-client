@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import Navbar from "./Navbar/Navbar";
 
 
 const SignUp = () => {
@@ -36,7 +37,9 @@ const SignUp = () => {
         })
     }
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div>
+            <Navbar></Navbar>
+            <div className="hero min-h-screen bg-base-200 mt-6">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Sign up now!</h1>
@@ -64,6 +67,7 @@ const SignUp = () => {
                     </form>
                 </div>
             </div>
+        </div>
         </div>
     );
 };
