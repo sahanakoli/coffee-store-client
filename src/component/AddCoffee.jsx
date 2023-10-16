@@ -114,7 +114,7 @@ const AddCoffee = () => {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Add Coffee" className="btn btn-neutral w-full" />
+                <input type="submit" value="Add Coffee" className="btn btn-neutral bg-[#D2B48C] w-full" />
             </form>
         </div>
         </div>
