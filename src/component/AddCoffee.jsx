@@ -20,7 +20,7 @@ const AddCoffee = () => {
         console.log(newCoffee);
 
         // send data to the server
-        fetch('http://localhost:5000/coffee', {
+        fetch('https://coffee-store-server-gilt.vercel.app/coffee', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -44,7 +44,7 @@ const AddCoffee = () => {
         <div>
             <Navbar></Navbar>
             <div className="bg-[#F4F3F0] p-24">
-            <h2 className=" text-3xl font-bold text-center mt-4">Add Coffee</h2>
+            <h2 className=" text-3xl font-bold text-center ">Add Coffee</h2>
             <form onSubmit={handleAddCoffee}>
                 {/* form name and quantity row */}
                 <div className="md:flex mb-8 mt-10">
@@ -114,7 +114,7 @@ const AddCoffee = () => {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Add Coffee" className="btn btn-neutral bg-[#D2B48C] w-full" />
+                <input type="submit" value="Add Coffee" className="btn  bg-[#D2B48C] w-full text-black" />
             </form>
         </div>
         </div>

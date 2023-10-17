@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Navbar from "./Navbar/Navbar";
 import { AuthContext } from "../provider/AuthProvider";
+import Swal from 'sweetalert2'
 
 
 const SignUp = () => {
@@ -20,7 +21,7 @@ const SignUp = () => {
             const createdAt = result.user?.metadata?.creationTime;
             const user = {email, createdAt: createdAt};
 
-            fetch('http://localhost:5000/user', {
+            fetch('https://coffee-store-server-gilt.vercel.app/user', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -30,6 +31,14 @@ const SignUp = () => {
             .then(res => res.json())
             .then(data =>{
                 console.log(data);
+                if(data.insertedId){
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Sign Up Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Ok'
+                      })
+                }
             })
         })
         .catch(error => {
